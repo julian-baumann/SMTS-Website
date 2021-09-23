@@ -1,0 +1,135 @@
+body {
+    text-align: center;
+    font-family: monospace;
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: aquamarine;
+}
+
+.subHeader {
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.section {
+    margin: 100px 0 100px 0;
+
+    >.header {
+        opacity: 0.5;
+        text-decoration: underline;
+    }
+}
+
+
+.splitViewContainer {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    justify-content: center;
+    padding: 10px;
+
+    .splitView {
+        margin-right: 60px;
+        text-align: center;
+        max-width: 600px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.downloadSection .content {
+
+    .option {
+        max-width: 300px;
+
+        .header {
+            margin: 0;
+        }
+
+        .description {
+            margin: 0;
+            opacity: 0.6;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.osSection {
+    margin-top: 80px;
+    padding: 10px;
+
+    &:first-of-type {
+        margin-top: 20px;
+    }
+}
+
+.important {
+    text-decoration: underline;
+}
+
+.codeExplanation {
+    margin-bottom: 30px;
+
+    .header {
+        font-style: italic;
+    }
+}
+
+code {
+    color: #eae5e5;
+    background: #313131;
+    padding: 5px;
+    display: block;
+    width: auto;
+    max-width: max-content;
+    border-radius: 5px;
+    margin: 5px auto 5px auto;
+    word-wrap: break-word;
+
+    .codeComment {
+        opacity: 0.6;
+        font-style: italic;
+    }
+}
+
+.installSection {
+    .step {
+        margin-bottom: 50px;
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+
+        .explanation {
+            opacity: 0.8;
+        }
+    }
+}
+
+footer {
+    margin-top: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .splitViewContainer {
+        flex-direction: column;
+        align-items: center;
+
+        .splitView {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+}

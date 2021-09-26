@@ -54,7 +54,9 @@ a {
   margin-bottom: 20px;
 }
 .downloadSection .content .option a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -107,6 +109,10 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  a {
+    height: 48px;
+  }
+
   .splitViewContainer {
     flex-direction: column;
     align-items: center;

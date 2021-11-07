@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
     <head>
         <title>SMTS</title>
         <meta charset="UTF-8" />
@@ -10,115 +10,130 @@
 
     <body>
 
-        <pre>███████╗███╗   ███╗████████╗███████╗
+        <pre class="logo">███████╗███╗   ███╗████████╗███████╗
 ██╔════╝████╗ ████║╚══██╔══╝██╔════╝
 ███████╗██╔████╔██║   ██║   ███████╗
 ╚════██║██║╚██╔╝██║   ██║   ╚════██║
 ███████║██║ ╚═╝ ██║   ██║   ███████║
 ╚══════╝╚═╝     ╚═╝   ╚═╝   ╚══════╝</pre>
 
-        <p class="subHeader">(CLI Preview)</p>
-        <h1>SMTS - Send me that shit</h1>
-        <a href="https://gitlab.com/julianbaumann/SMTS"">View source code on GitLab</a>
+        <h1 class="subHeader">Send me that shit</h1>
+        <p class="previewMark">(Preview)</p>
+        <a href="https://github.com/julian-baumann/SMTS" target="_blank">View source code on GitHub</a>
 
-        <section class="section downloadSection">
-            <h2 class="header">Downloads</h2>
+        <div class="mainContent">
+            <fieldset>
+                <legend>iOS/Android App</legend>
+                <div class="appLinks">
+                    <a href="download/android/SMTS.apk">Android APK</a>
+                    <a href="https://testflight.apple.com/join/TA1GbTSU">iOS TestFlight link</a>
+                </div>
+            </fieldset>
 
-            <div class="content">
-                <div class="splitViewContainer">
-                    <div class="option splitView">
-                        <h3 class="header">I already have .NET installed on my system</h3>
-                        <p class="description">This version is framework-dependend and needs the .NET 5 Runtime on your system</p>
+            <fieldset>
+                <legend>CLI</legend>
+                <section class="section downloadSection">
+                    <h2 class="header">Downloads</h2>
 
-                        <a class="link" href="download/framework-dependend/linux/smts" download>Linux Download</a>
-                        <a class="link" href="download/framework-dependend/macOS/smts" download>macOS Download</a>
-                        <a class="link" href="download/framework-dependend/windows/smts.exe" download>Windows Download</a>
+                    <div class="content">
+                        <div class="splitViewContainer">
+                            <div class="option splitView">
+                                <h3 class="header">I already have .NET installed on my system</h3>
+                                <p class="description">This version is framework-dependend and needs the .NET 5 Runtime on your system</p>
+
+                                <a class="link" href="download/framework-dependend/linux/x64/smts" download>Linux (x64) Download</a>
+                                <a class="link" href="download/framework-dependend/linux/arm/smts" download>Linux (arm) Download</a>
+                                <a class="link" href="download/framework-dependend/macOS/smts" download>macOS Download</a>
+                                <a class="link" href="download/framework-dependend/windows/smts.exe" download>Windows Download</a>
+                            </div>
+                            <div class="option splitView">
+                                <h3 class="header">I <span class="important">don't</span> have .NET installed on my system</h3>
+                                <p class="description">This version is self-contained and has the .NET 5 Runtime bundled with it. So you don't have to install it on your own</p>
+
+                                <a class="link" href="download/self-contained/linux/x64/smts" download>Linux (x64) Download</a>
+                                <a class="link" href="download/self-contained/linux/arm/smts" download>Linux (arm) Download</a>
+                                <a class="link" href="download/self-contained/macOS/smts" download>macOS Download</a>
+                                <a class="link" href="download/self-contained/windows/smts.exe" download>Windows Download</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="option splitView">
-                        <h3 class="header">I <span class="important">don't</span> have .NET installed on my system</h3>
-                        <p class="description">This version is self-contained and has the .NET 5 Runtime bundled with it. So you don't have to install it on your own</p>
+                </section>
 
-                        <a class="link" href="download/self-contained/linux/smts" download>Linux Download</a>
-                        <a class="link" href="download/self-contained/macOS/smts" download>macOS Download</a>
-                        <a class="link" href="download/self-contained/windows/smts.exe" download>Windows Download</a>
+                <section class="section howToSection">
+                    <h2 class="header">How to use</h2>
+
+                    <div class="content">
+                        <div class="codeExplanation">
+                            <p class="header">After the dowload, make the file executable (Unix):</p>
+                            <code>
+                                chmod +x ./smts
+                            </code>
+                        </div>
+
+                        <div class="codeExplanation">
+                            <p class="header">Start listening for incoming file requests:</p>
+                            <code>
+                                ./smts
+                            </code>
+                        </div>
+
+                        <div class="codeExplanation">
+                            <p class="header">Example of how to send a file:</p>
+                            <code>
+                                ./smts send 192.168.42.120 file.txt
+                            </code>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section class="section howToSection">
-            <h2 class="header">How to use</h2>
+                <section class="section installSection">
+                    <h2 class="header">Installation</h2>
 
-            <div class="content">
-                <div class="codeExplanation">
-                    <p class="header">After the dowload, make the file executable (Unix):</p>
-                    <code>
-                        chmod +x ./smts
-                    </code>
-                </div>
+                    <div class="content">
+                        <div class="osSection">
+                            <h2>Without installation</h2>
+                            <p class="explanation">
+                                You won't need to "install" this binary in order to use it. <br />
+                                Just open the terminal navigate to the smts file you downloaded and run it with ./smts or smts.exe on windows <br />
+                                <br />
+                                If you want to access the smts command from everywhere in your terminal follow the steps below
+                            </p>
+                        </div>
+                        <div class="osSection">
+                            <h2>Unix (Linux/macOS)</h2>
 
-                <div class="codeExplanation">
-                    <p class="header">Start listening for incoming file requests:</p>
-                    <code>
-                        ./smts
-                    </code>
-                </div>
+                            <div class="step">
+                                <p class="explanation">
+                                    Create a directory to put the binary into and add the path to that directory to your PATH environment variable <br />
+                                </p>
+                                <code>mkdir ~/.smts</code>
+                                <code>cp ./smts ~/.smts</code>
 
-                <div class="codeExplanation">
-                    <p class="header">Example of how to send a file:</p>
-                    <code>
-                        ./smts send 192.168.42.120 file.txt
-                    </code>
-                </div>
-            </div>
-        </section>
+                                <code>
+                                    <span class="codeComment">Add the following line to your ~/.zshrc or ~/.bashrc (or similar) file</span>
+                                    <br>
+                                    export PATH=$PATH:~/.smts
+                                </code>
+                            </div>
 
-        <section class="section installSection">
-            <h2 class="header">Installation</h2>
+                            <div class="step">
+                                <p class="explanation">
+                                    Restart your terminal and now you should be able to use the "smts" command
+                                </p>
+                            </div>
+                        </div>
 
-            <div class="content">
-                <div class="osSection">
-                    <h2>Without installation</h2>
-                    <p class="explanation">
-                        You won't need to "install" this binary in order to use it. <br />
-                        Just open the terminal navigate to the smts file you downloaded and run it with ./smts or smts.exe on windows <br />
-                        <br />
-                        If you want to access the smts command from everywhere in your terminal follow the steps below
-                    </p>
-                </div>
-                <div class="osSection">
-                    <h2>Unix (Linux/macOS)</h2>
+                        <div class="osSection">
+                            <h2>Windows</h2>
 
-                    <div class="step">
-                        <p class="explanation">
-                            Create a directory to put the binary into and add the path to that directory to your PATH environment variable <br />
-                        </p>
-                        <code>mkdir ~/.smts</code>
-                        <code>cp ./smts ~/.smts</code>
-
-                        <code>
-                            <span class="codeComment">Add the following line to your ~/.zshrc or ~/.bashrc (or similar) file</span>
-                            <br>
-                            export PATH=$PATH:~/.smts
-                        </code>
+                            <div class="step">
+                                <p class="explanation">I dunno how to configure this on windows, but I guess very similar</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="step">
-                        <p class="explanation">
-                            Restart your terminal and now you should be able to use the "smts" command
-                        </p>
-                    </div>
-                </div>
-
-                <div class="osSection">
-                    <h2>Windows</h2>
-
-                    <div class="step">
-                        <p class="explanation">I dunno how to configure this on windows, but I guess very similar</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
+            </fieldset>
+        </div>
 
         <footer>
             <p>Author: Julian Baumann</p>
